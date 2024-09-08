@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>section1-2: LED와 원자</title>
+    <style>
+      body {
+        background-color: #ffc0cb; /* 연분홍색 배경 */
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .bold {
+        font-weight: bold;
+        font-size: 25px; /* LED 글씨 크기 */
+      }
+      p {
+        font-size: 20px; /* 일반 텍스트 크기 */
+        line-height: 1.5;
+      }
+      .highlight-purple {
+        color: purple;
+      }
+      .highlight-red {
+        color: red;
+      }
+      .large-text {
+        font-size: 25px;
+        margin-top: 20px;
+      }
+      .photo-container {
+        display: flex;
+        justify-content: space-between; /* 이미지 간격을 균등하게 배분 */
+        margin-top: 20px;
+      }
+      .photo-container img {
+        width: 5%; /* 부모 요소 너비의 10% */
+        height: 5%;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      /* home? 박스 스타일 */
+      .home-box {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .home-box:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-5px);
+      }
+
+      /* Container for the atom */
+      .atom {
+        position: relative;
+        width: 200px; /* Adjust the width and height as needed */
+        height: 200px;
+        margin: 50px auto;
+      }
+
+      /* Nucleus style */
+      .nucleus {
+        position: absolute;
+        width: 20px; /* Nucleus size */
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white; /* Text color */
+        font-weight: bold; /* Make the '+' bold */
+        font-size: 14px; /* Font size of the '+' */
+      }
+
+      /* Orbit style */
+      .orbit {
+        position: absolute;
+        width: 100px; /* Orbit diameter */
+        height: 100px;
+        border: 1px solid white;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Electron style */
+      .electron {
+        position: absolute;
+        width: 10px; /* Electron size */
+        height: 10px;
+        background-color: blue;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LED와 원자</h1>
+
+    <p>
+      <span class="bold">LED</span> : 반도체의 일종으로 전기를 받으면 빛을 내는
+      성질의 특별한 물질을 이용해 빛을 내뿜도록 만든 것.
+    </p>
+
+    <p>
+      이 특별한 물질도 다른 물질처럼 원자가 모여 만들어졌고 이 원자 주위를
+      빠르게 돌아다니는 전자가 존재함.
+    </p>
+
+    <!-- Atom with Nucleus and Electrons -->
+    <div class="atom">
+      <div class="nucleus">+</div>
+      <div class="orbit">
+        <div class="electron">-</div>
+      </div>
+      <div class="orbit">
+        <div class="electron">-</div>
+      </div>
+    </div>
+
+    <script>
+      function animateElectrons() {
+        const electrons = document.querySelectorAll(".electron");
+        const orbitRadius = 50; // The radius of the orbit
+        const speed = 0.002; // Rotation speed
+
+        function updatePositions() {
+          const now = Date.now();
+          const angle = (now * speed) % (2 * Math.PI);
+
+          electrons.forEach((electron, index) => {
+            const offset = index * ((2 * Math.PI) / electrons.length); // Initial offset of each electron
+            const x = orbitRadius * Math.cos(angle + offset);
+            const y = orbitRadius * Math.sin(angle + offset);
+            electron.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`; // Adjust position with orbit center
+          });
+
+          requestAnimationFrame(updatePositions);
+        }
+
+        updatePositions();
+      }
+
+      animateElectrons();
+    </script>
+    <p>전자가 움직이는 모양과 속도에 따라 내뿜는 빛의 색이 정해짐.</p>
+
+    <p>
+      - 원자 주변을 돌던 전자가 전기를 받고 심하게 빨라졌다가 느려졌다가 하면 이
+      전자는 <span class="highlight-purple">보라색</span>에 가까운 빛을
+      내뿜는다.
+    </p>
+    <img src="언매 수행 보LED.jpg" alt="언매 수행 보LED" />
+    <font-size:0.2px 0.2px>출처: EasyKIT</font-size:0.2px>
+    <p>
+      - 약간만 변화한다면, 이 전자는 <span class="highlight-red">빨간색</span>에
+      가까운 빛을 내뿜는다.
+    </p>
+    <img src="언매 수행 빨LED.jpg" alt="언매 수행 빨LED" />
+    <font-size:0.2px 0.2px>출처: EasyKIT</font-size:0.2px>
+
+    <p class="large-text">
+      => LED가 개발된 초창기부터 빨간빛을 뿜는 제품을 만드는 일이 어렵지 않아
+      빨간빛을 내뿜는 전자제품이 흔해졌고 이런 전통이 현재까지 이어져 온 것이다.
+    </p>
+    <!-- home 박스 -->
+    <a href="section1.html" class="home-box">처음으로</a>
+  </body>
+</html>

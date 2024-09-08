@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생활 속에 스며든 공학</title>
+    <style>
+      body {
+        background-color: #ffc0cb; /* 연분홍색 배경 */
+        font-family: Arial, sans-serif;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        width: 80%;
+      }
+      li {
+        margin: 10px 0;
+        width: 100%;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        padding: 20px;
+        background-color: #fff; /* 흰색 배경 */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      a:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-5px);
+      }
+      .home-box {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .home-box:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-5px);
+      }
+      /* 섹션1 스타일 */
+      #section1 {
+        display: none; /* 처음에는 보이지 않도록 */
+        background-color: #ffc0cb;
+        padding: 50px;
+        text-align: center;
+      }
+      .photo-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .photo-container img {
+        width: 20%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      /* Why? 박스 스타일 */
+      .why-box {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .why-box:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-5px);
+      }
+    </style>
+    <script>
+      function showSection1() {
+        document.getElementById("section1").style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>생활 속에 스며든 공학</h1>
+    </header>
+    <span>20620 전세린</span>
+    <nav>
+      <ul>
+        <li>
+          <a href="javascript:void(0)" onclick="showSection1()"
+            >왜 세상은 빨간빛?</a
+          >
+        </li>
+        <li><a href="section2.html">이 세계에선 내가 주인공?</a></li>
+        <li><a href="section3.html">마무리</a></li>
+      </ul>
+    </nav>
+
+    <!-- 섹션 1: 왜 세상은 빨간빛? -->
+    <div id="section1">
+      <h2>왜 세상은 빨간빛?</h2>
+      <div class="photo-container">
+        <img src="언매 수행 빨강1.jpg" alt="언매 수행 빨강1" />
+        <img src="언매 수행 빨강2.jpg" alt="언매 수행 빨강2" />
+        <img src="언매 수행 빨강3.jpg" alt="언매 수행 빨강3" />
+        <img src="언매 수행 빨강4.jpg" alt="언매 수행 빨강4" />
+      </div>
+
+      <!-- Why? 박스 -->
+      <a href="section1-1.html" class="why-box">Why?</a>
+    </div>
+  </body>
+</html>

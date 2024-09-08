@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>섹션 2 - 이 세계에선 내가 주인공?</title>
+    <style>
+      body {
+        background-color: #ffc0cb; /* 연분홍색 배경 */
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .content {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        width: 80%;
+      }
+      li {
+        margin: 10px 0;
+        width: 100%;
+      }
+      .highlight-box {
+        background-color: #fff; /* 흰색 배경 */
+        color: #000;
+        font-size: 23px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 20px;
+      }
+      .description {
+        font-size: 20px;
+        display: inline-block;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        padding: 20px;
+        background-color: #fff; /* 흰색 배경 */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      a:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-5px);
+      }
+      .highlight-lightpurple {
+        color: rgb(145, 96, 224);
+        font-size: 20px
+      }
+      .home-box {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .home-box:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-5px);
+      }
+    </style>
+    <script>
+        function showSection2() {
+          document.getElementById("section2.html").style.display = "block";
+        }
+      </script>
+  </head>
+  <body>
+    <body>
+      <header>
+        <h1>생활 속에 스며든 공학</h1>
+      </header>
+  
+      <nav>
+        <ul>
+          
+          <li><a href="section1">왜 세상은 빨간색?</a></li>
+          <li></li>
+            <a href="javascript:void(0)" onclick="showSection2()"
+              >이 세계에선 내가 주인공?</a
+            >
+          </li>
+          <li><a href="section3">마무리</a></li>
+        </ul>
+      </nav>
+
+    <div class="content">
+      <p>- 기본 개념: </p>
+      <p>1) 같은 족 원소끼리는 성질이 비슷함.</p>
+      <p>2) 요즘의 반도체 주재료는 규소이다.</p>
+      <p>3) 규소와 저마늄은 같은 족이다.</p>
+      <p>4) 규소와 저마늄의 원자가 전자수는 4개, 갈륨의 원자가 전자수는 3개,
+        비소의 원자가 전자수는 5개이다.
+      </p>
+
+      <p></p>
+      <!-- 한 단락을 뛰고 -->
+
+      <span>
+        <p class="highlight-box">갈륨비소 반도체</p>
+      <span class="description"
+        >저마늄이나 규소와 비슷한 성질을 낼 수 있도록 갈륨과 비소를 조합한
+        반도체</span
+      >
+      <p class="highlight-lightpurple"> 1)규소 반도체보다 전기에 훨씬 쉽게 반응하는 특성이 있어 전력이 덜 들고 속도가 빠른 반도체 부품을 만들 수 있음</p>
+      <p class="highlight-lightpurple"> 2)그러나, 규소를 사용하는 바도체 기술이 워낙 빠르게 발전하는 바람에 반도체를 향한 기대가 줄어듦.</p>
+      </div>
+        
+      </p>
+    </div>
+    <a href="section1.html" class="home-box">처음으로</a>
+  </body>
+</html>
